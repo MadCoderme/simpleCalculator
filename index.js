@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     case 'add':
       res = f + s
       break
-    case 'minus":
+    case 'minus':
       res = f - s
       break
     default:
