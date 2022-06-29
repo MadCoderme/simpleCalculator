@@ -3,9 +3,9 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
-  let f = req.query.f
+  let f = +req.query.f
   let o = req.query.o
-  let s = req.query.s
+  let s = +req.query.s
   var res = 0
   
   switch(o) {
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
       break
   }
   
-  res.send(res)
+  res.send(res.toString())
 })
 
 app.listen(port, () => {
