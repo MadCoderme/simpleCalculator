@@ -6,20 +6,21 @@ app.get('/', (req, res) => {
   let f = +req.query.f
   let o = req.query.o
   let s = +req.query.s
-  var res = 0
+  var r = 0
   
   switch(o) {
     case 'add':
-      res = f + s
+      r = f + s
       break
     case 'minus':
-      res = f - s
+      r = f - s
       break
     default:
       break
   }
+  console.log(r)
   
-  res.send(res.toString())
+  res.send('Result: ' + r.toString())
 })
 
 app.listen(port, () => {
