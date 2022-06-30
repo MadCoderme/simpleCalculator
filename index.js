@@ -15,6 +15,12 @@ app.get('/', (req, res) => {
     case 'minus':
       r = f - s
       break
+    case 'multiply':
+      r = f*s
+      break
+    case 'divide':
+      r = f / s
+      break
     default:
       break
   }
