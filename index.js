@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   }
   console.log(r)
   
-  res.send('Result: ' + r.toString())
+  res.json({res: r.toString()})
 })
 
 app.listen(port, () => {
